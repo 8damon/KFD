@@ -14,6 +14,13 @@ Eventually I realized: Why not just use what’s already there? All the real Nt*
 
 That’s what **Konflict** does. For every syscall, it builds a small encrypted bridge, not a full stub, just a minimal jump into the legit ntdll prologue. It decrypts, jumps in, and leaves zero trace outside of what a normal call would look like. No RWX stubs hanging around. No post-stack spoofing, No suspicious caller addresses. Just clean, indirect syscall execution, from the source!
 
+## Diagrams
+
+![KFD](./Diagram/KFD.png)
+![KFD_2](./Diagram/KDF_2.png)
+
+KFD passes the kernel side RIP/RSP check, call stack check and frame inspection and skips usermode hooks.
+
 ## FFI Usage (From C or External Language)
 
 You can dynamically load the compiled `konflict.dll` and call `kf_call` directly:
