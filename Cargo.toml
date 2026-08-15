@@ -2,7 +2,7 @@
 name = "konflict"
 version = "0.1.0"
 edition = "2021"
-authors = ["TITAN Softwork Solutions"]
+authors = ["RYFTENIUS"]
 license = "Attribution-NonCommercial-NoDerivatives 4.0 International"
 
 [dependencies]
